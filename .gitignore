@@ -2,15 +2,12 @@
 # Node / NPM
 # =========================
 node_modules/
-*.log
-logs/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-package-lock.json.tmp
-yarn.lock.tmp
-pnpm-lock.yaml.tmp
+*.log
+logs/
 
 # =========================
 # Environment / Secrets
@@ -19,7 +16,7 @@ pnpm-lock.yaml.tmp
 .env.*
 !.env.example
 
-# API keys / certificados (evitar subir PFX/XML)
+# Certificados / llaves (no subir jamás)
 *.pfx
 *.p12
 *.pem
@@ -30,36 +27,37 @@ pnpm-lock.yaml.tmp
 *.der
 *.jks
 
-# XML/zip de DTE/sobre (si son generados localmente)
-*.xml
-*.zip
-
-# =========================
-# Logs
-# =========================
-logs/
-*.log
-
 # =========================
 # Build / Cache
 # =========================
 dist/
 build/
 coverage/
-.tmp/
-temp/
-.tmp_*
 .cache/
 .parcel-cache/
-.vscode/.cache/
+.tmp/
+temp/
 
 # =========================
 # Runtime data (persistencia local demo)
+# OJO: ignoramos contenido, no la carpeta
 # =========================
-src/data/
-data/
+src/data/*
+data/*
 !src/data/.gitkeep
 !data/.gitkeep
+
+# =========================
+# Uploads / storage temporal
+# =========================
+src/storage/tmp/
+src/storage/uploads/
+storage/
+tmp/
+
+# Si generas DTE/Sobre/adjuntos localmente, ignora SOLO en storage:
+src/storage/**/*.xml
+src/storage/**/*.zip
 
 # =========================
 # OS / Editor
@@ -68,18 +66,15 @@ data/
 Thumbs.db
 ehthumbs.db
 Desktop.ini
-.DS_Store
-.vscode/
-.idea/
 
-# VSCode / JetBrains
 .vscode/
 !.vscode/extensions.json
 !.vscode/settings.json
+
 .idea/
 
 # =========================
-# Misc
+# Vim swap
 # =========================
 *.swp
 *.swo

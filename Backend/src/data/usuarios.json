@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "usuario": "admin@demo.cl",
+    "passwordHash": "$2b$10$gjGP/jeO787Q4B/rifjDHu5sJD6nNcLQhQ/7qcF722C5WZD0Spo4K",
+    "rol": "ADMIN",
+    "activo": true
+  },
+  {
+    "id": 2,
+    "usuario": "user@demo.cl",
+    "passwordHash": "$2b$10$mseKYsnZ6n7PZNdk7IwqE.KJmIK4k0dSGffm15uQj04uxHzwApDU2",
+    "rol": "USER",
+    "activo": true
+  }
+]

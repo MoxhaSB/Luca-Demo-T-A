@@ -1,0 +1,36 @@
+[
+  {
+    "id": "9397e916-0818-4d81-9019-588c9dfd0d65",
+    "userId": "2",
+    "createdAt": "2026-01-28T15:37:02.378Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "¿Qué datos necesito para emitir una boleta de honorarios?",
+        "at": "2026-01-28T15:37:02.378Z"
+      },
+      {
+        "role": "assistant",
+        "content": "",
+        "at": "2026-01-28T15:37:08.207Z"
+      }
+    ]
+  },
+  {
+    "id": "837d5e41-a239-4156-b4fb-51ea9c3c45af",
+    "userId": "2",
+    "createdAt": "2026-01-28T15:51:38.465Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "¿Qué datos necesito para emitir una boleta de honorarios?",
+        "at": "2026-01-28T15:51:38.466Z"
+      },
+      {
+        "role": "assistant",
+        "content": "Para emitir una boleta de honorarios necesitas:\n\n1. Datos del emisor: nombre completo, RUT y dirección.\n2. Datos del receptor: nombre completo o razón social y RUT.\n3. Fecha de emisión.\n4. Descripción detallada del servicio prestado.\n5. Monto bruto y, si corresponde, retención de impuestos.\n6. Forma de pago.\n\nSi emitirás la boleta electrónica, debes hacerlo a través del portal del SII o software autorizado. ¿Quieres que te guíe en el proceso electrónico?",
+        "at": "2026-01-28T15:51:42.422Z"
+      }
+    ]
+  }
+]
