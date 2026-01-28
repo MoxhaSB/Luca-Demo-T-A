@@ -1,0 +1,85 @@
+# =========================
+# Node / NPM
+# =========================
+node_modules/
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json.tmp
+yarn.lock.tmp
+pnpm-lock.yaml.tmp
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# API keys / certificados (evitar subir PFX/XML)
+*.pfx
+*.p12
+*.pem
+*.key
+*.crt
+*.cer
+*.csr
+*.der
+*.jks
+
+# XML/zip de DTE/sobre (si son generados localmente)
+*.xml
+*.zip
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Build / Cache
+# =========================
+dist/
+build/
+coverage/
+.tmp/
+temp/
+.tmp_*
+.cache/
+.parcel-cache/
+.vscode/.cache/
+
+# =========================
+# Runtime data (persistencia local demo)
+# =========================
+src/data/
+data/
+!src/data/.gitkeep
+!data/.gitkeep
+
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# VSCode / JetBrains
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+
+# =========================
+# Misc
+# =========================
+*.swp
+*.swo

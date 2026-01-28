@@ -1,0 +1,18 @@
+[
+  {
+    "idUsuario": 1,
+    "esPrimeraVez": false,
+    "nombreCompleto": "Admin Demo",
+    "rut": "11.111.111-1",
+    "telefonoPersonal": "+56911111111",
+    "cargo": "Administrador"
+  },
+  {
+    "idUsuario": 2,
+    "esPrimeraVez": true,
+    "nombreCompleto": "",
+    "rut": "",
+    "telefonoPersonal": "",
+    "cargo": ""
+  }
+]
