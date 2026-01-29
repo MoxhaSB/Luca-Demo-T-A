@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Interfaz 3</title>
+  <link rel="stylesheet" href="DiseñoTerceraInterfaz.css">
+</head>
+<body>
+
+  <!-- Indicadores -->
+  <div class="indicadores">
+    <span>1</span>
+    <span>2</span>
+    <span class="activo">3</span>
+    <span>4</span>
+  </div>
+
+  <h1>Paso 3: Servicios Prestados</h1>
+
+  <!-- Servicios -->
+  <div id="servicios">
+
+    <div class="servicio">
+      <h2>Servicio <span class="numero-servicio">1</span></h2>
+
+      <div class="campo">
+        <label>Descripción</label>
+        <input type="text">
+      </div>
+
+      <div class="campo">
+        <label>Valor</label>
+        <input type="number" class="valor" value="0">
+      </div>
+
+      <button type="button" class="eliminar" disabled>Eliminar</button>
+    </div>
+
+  </div>
+
+  <!-- Botón duplicar -->
+  <button type="button" id="agregar">Agregar servicio</button>
+
+  <!-- Total -->
+  <div class="total">
+    <h3>Total servicios: $<span id="total">0</span></h3>
+  </div>
+
+  <!-- Navegación -->
+  <div class="botones">
+    <button type="button">Anterior</button>
+    <button type="button">Siguiente</button>
+  </div>
+
+  <script>
+    const servicios = document.getElementById("servicios");
+    const agregarBtn = document.getElementById("agregar");
+    const totalSpan = document.getElementById("total");
+
+    function actualizarServicios() {
+      const items = document.querySelectorAll(".servicio");
+
+      items.forEach((servicio, index) => {
+        servicio.querySelector(".numero-servicio").textContent = index + 1;
+
+        const eliminarBtn = servicio.querySelector(".eliminar");
+        eliminarBtn.disabled = items.length === 1;
+      });
+
+      calcularTotal();
+    }
+
+    function calcularTotal() {
+      let total = 0;
+      document.querySelectorAll(".valor").forEach(input => {
+        total += Number(input.value) || 0;
+      });
+      totalSpan.textContent = total;
+    }
+
+    agregarBtn.addEventListener("click", () => {
+      const nuevo = servicios.firstElementChild.cloneNode(true);
+
+      nuevo.querySelectorAll("input").forEach(input => {
+        input.value = input.classList.contains("valor") ? 0 : "";
+      });
+
+      nuevo.querySelector(".eliminar").disabled = false;
+
+      servicios.appendChild(nuevo);
+      actualizarServicios();
+    });
+
+    servicios.addEventListener("click", (e) => {
+      if (e.target.classList.contains("eliminar")) {
+        e.target.closest(".servicio").remove();
+        actualizarServicios();
+      }
+    });
+
+    servicios.addEventListener("input", (e) => {
+      if (e.target.classList.contains("valor")) {
+        calcularTotal();
+      }
+    });
+  </script>
+
+</body>
+<script src="FuncionamientoTerceraInterfaz.js"></script>
+</html>

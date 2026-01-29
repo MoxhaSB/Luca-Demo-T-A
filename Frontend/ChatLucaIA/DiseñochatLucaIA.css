@@ -1,0 +1,381 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+/* CONTENEDOR GENERAL */
+.app-wrapper {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+
+/* BOTÓN CERRAR SESIÓN */
+.logout-button {
+  transform: translateY(-8px);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #3C0366;
+  color: white;
+  font-weight: normal;
+}
+
+.logout-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+  display: block;
+}
+
+/* MENÚ LATERAL */
+.side-menu {
+  width: 80px; 
+  background: #FCF5FF;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: width 0.3s ease;
+  overflow: visible;
+  padding: 20px 10px 20px 20px;
+}
+
+.side-menu.expanded {
+  width: 260px;
+}
+
+/* Logos */
+.menu-logos {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 80px;          /* 👈 ALTURA FIJA */
+  min-height: 80px;
+  
+}
+
+.menu-logos img:first-child {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.logo-big {
+  display: none;
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.side-menu.expanded .logo-big {
+  display: block;
+}
+
+/* BOTÓN MENÚ FUERA */
+.menu-toggle {
+  position: absolute;
+  left: 80px; 
+  top: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #5E35B1;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: left 0.3s ease;
+}
+
+.side-menu.expanded ~ .menu-toggle {
+  left: 260px;
+}
+
+/* OPCIONES */
+.menu-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-button {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px;
+  background: #FCF5FF;
+  color: #6E11B0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-button img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.menu-button:hover {
+  background-color: #E9D4FF;  
+}
+
+/* ======================
+   SUBMENÚ FACTURA (A LA DERECHA)
+====================== */
+.submenu {
+  position: relative; /* contenedor relativo para posicionar el submenú */
+}
+
+.submenu-options {
+  display: none;
+  flex-direction: column;       /* mantiene los botones verticales */
+  position: absolute;           /* flota respecto al botón padre */
+  top: 0;                       /* alineado con la parte superior del botón principal */
+  left: 100%;  
+  margin-left: 10px;                 /* se despliega a la derecha */
+  background-color: #FFFFFF;    /* fondo del mini-submenú */
+  border-radius: 8px;           /* bordes redondeados */
+  padding: 0 0 12px 0;                   /* eliminamos padding */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  min-width: 220px;             /* ancho mínimo del submenú */
+  z-index: 100;                 /* queda sobre otros elementos */
+  gap: 12px;
+}
+
+.submenu-options.active {
+  display: flex;
+}
+
+/* Título del submenú con fondo distinto */
+.submenu-title {
+  height: 36px;                 /* un poco más compacto */
+  display: flex;
+  align-items: center;          /* centra verticalmente el texto */
+  font-size: 14px;
+  font-weight: bold;
+  color: #4A148C;
+  background-color: #FAF5FF;
+  padding: 26px 12px 26px 12px;              /* padding solo horizontal */
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px 8px 0 0;
+  margin: 0          /* centra el texto */
+}
+
+/* Botones del submenú */
+.submenu-options button {
+  height: 45px;
+  width: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;     /* centra contenido horizontal */
+  gap: 14px;
+  padding: 0 10px;
+  background-color: #FFFFFF;
+  color: #8905e0;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0 auto;             /* centra el botón dentro del mini-submenú */
+}
+
+.submenu-options button img {
+  width: 18px;
+  height: 18px;
+}
+
+.submenu-options button:hover {
+  background-color: #F3E8FF;
+}
+
+/* SUBMENÚ cuando la sidebar está expandida */
+.side-menu.expanded .submenu-options {
+  position: static;    /* 👈 vuelve al flujo normal */
+  margin-left: 0;
+  margin-top: 8px;     /* separación con el botón */
+}
+
+/* Mostrar título SOLO cuando la sidebar está comprimida */
+.side-menu:not(.expanded) .submenu-title {
+  display: block;
+}
+
+/* Ocultar título cuando la sidebar está expandida */
+.side-menu.expanded .submenu-title {
+  display: none;
+}
+
+
+
+/* CHAT */
+.chat-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  height: 64px;
+  align-items: center;
+  padding: 0px 20px;
+  background: #CABCD6;
+  color: white;
+  display: flex;
+  
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.chat-title {
+  margin-left: 40px;
+  position: relative;
+  transition: margin-left 0.3s ease;
+  font-size: 18px;
+  font-weight: normal;
+  color: #59168B;
+}
+
+.chat-messages {
+  flex: 1;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 407px;
+  background: #11e43f;
+}
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+  padding: 8px 15px;
+  justify-content: center;
+}
+
+.chat-input input {
+  flex: 0 0 50%;     /* 👈 ahora sí */
+  max-width: 50%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #7E4A83;
+  position: relative;
+  top: -40px;
+  border: none;
+  outline: none;
+  color: #FFFFFF;
+
+}
+
+.chat-input button {
+  padding: 10px 20px;
+}
+
+/* Sidebar comprimida */
+.menu-button .label {
+  display: none;
+}
+
+.side-menu.expanded .menu-button .label {
+  display: inline;
+}
+
+.side-menu:not(.expanded) {
+  padding-left: 0;
+  padding-right: 0;
+  align-items: center;
+}
+
+.side-menu:not(.expanded) .menu-button {
+  width: 44px;
+  justify-content: center;
+  padding: 0;
+  margin: 6px 0;
+}
+
+.side-menu:not(.expanded) .menu-button img {
+  display: block;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.side-menu:not(.expanded) .menu-button .label {
+  display: none;
+}
+
+/* BOTONES CON IMAGEN EN EL INPUT */
+.icon-button {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -40px;
+}
+
+.icon-button img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Hover sutil */
+.icon-button:hover {
+  background-color: #E9D4FF;
+}
+
+/* Ajuste del input para que se vea integrado */
+.chat-input input {
+  justify-content: center;
+  flex: 0 0 45%;   /* 👈 ocupa solo el 50% */
+  max-width: 45%
+}
+
+.icon-button.left {
+  width: 50px;      /* 👈 más grande */
+  height: 50px;
+  background-color: #9A7EB2;   /* 👈 color que tú quieras */
+}
+
+.icon-button.right {
+  width: 50px;      /* 👈 más grande */
+  height: 50px;
+  padding: 0;
+}
+
+.icon-button.right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+
+

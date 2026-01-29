@@ -1,0 +1,79 @@
+/* Reset mínimo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estructura general */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Indicadores */
+.indicadores {
+  margin-bottom: 20px;
+}
+
+.indicadores span {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 5px 10px;
+  border: 1px solid #000;
+}
+
+/* Contenedor de servicio */
+.servicio {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+/* Campos */
+.campo {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+input {
+  width: 100%;
+  padding: 6px;
+}
+
+/* Botones */
+button {
+  padding: 6px 12px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+/* Botones de eliminar dentro del servicio */
+.servicio .eliminar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+/* Botón agregar */
+#agregar {
+  margin-bottom: 15px;
+}
+
+/* Total */
+.total {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Navegación */
+.botones {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}

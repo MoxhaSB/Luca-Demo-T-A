@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Interfaz 1</title>
+  <link rel="stylesheet" href="DiseñoPrimeraInterfaz.css">
+</head>
+<body>
+
+  <!-- Indicadores de interfaz -->
+  <div class="indicadores">
+    <span class="activo">1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+  </div>
+
+  <h1>Paso 1: Información Básica</h1>
+
+  <!-- Fecha de emisión -->
+  <div class="campo">
+    <label for="fecha">Fecha de emisión</label>
+    <input type="date" id="fecha">
+  </div>
+
+  <!-- Tipo de retención -->
+  <div class="campo">
+    <label for="retencion">Tipo de retención</label>
+    <select id="retencion">
+      <option value="">Seleccione una opción</option>
+      <option value="opcion1">Opción 1</option>
+      <option value="opcion2">Opción 2</option>
+    </select>
+  </div>
+
+  <!-- Dirección de emisor -->
+  <div class="campo">
+    <label for="direccion">Dirección de emisor</label>
+    <input type="text" id="direccion" placeholder="Ingrese la dirección del emisor">
+  </div>
+
+  <!-- Botones -->
+  <div class="botones">
+    <button type="button">Cancelar</button>
+    <button type="button">Siguiente</button>
+  </div>
+
+</body>
+<script src="FuncionamientoPrimeraInterfaz.js"></script>
+</html>

@@ -1,0 +1,50 @@
+/* Reset mínimo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estructura base */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Indicadores */
+.indicadores {
+  margin-bottom: 20px;
+}
+
+.indicadores span {
+  display: inline-block;
+  margin-right: 8px;
+  padding: 5px 10px;
+  border: 1px solid #000;
+}
+
+/* Campos del formulario */
+.campo {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+input {
+  width: 100%;
+  padding: 6px;
+}
+
+/* Botones */
+.botones {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 14px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Asistente IA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="DiseñochatLucaIA.css">
+</head>
+<body>
+
+<div class="app-wrapper">
+
+  <!-- BOTÓN CERRAR SESIÓN -->
+  
+
+  <!-- MENÚ LATERAL -->
+  <aside class="side-menu">
+
+    <!-- LOGOS -->
+    <div class="menu-logos">
+      <img src="../AssetsLuca/Icono_sidebar_luca2.png" alt="logo pequeño">
+      <img class="logo-big" src="../AssetsLuca/logo luca.png" alt="logo grande">
+    </div>
+
+    <!-- OPCIONES -->
+    <div class="menu-options">
+      <button class="menu-button">
+        <img src="../AssetsLuca/icono menu.png" alt="chat">
+        <span class="label">Chat de IA</span>
+      </button>
+
+      <button class="menu-button boleta-btn">
+        <img src="../AssetsLuca/boleta.png" alt="boleta">
+        <span class="label">Boleta de Honorarios</span>
+      </button>
+
+      <!-- SUBMENÚ FACTURA -->
+      <div class="submenu">
+        <button class="menu-button factura-btn">
+          <img src="../AssetsLuca/factura.png" alt="factura">
+          <span class="label">Factura Electrónica</span>
+        </button>
+
+        <div class="submenu-options">
+          <!-- Título con fondo distinto -->
+          <div class="submenu-title">Factura Electrónica</div>
+
+          <!-- Botones del submenú -->
+          <button>
+            <img src="../AssetsLuca/icono documentos.png" alt="">
+            <span class="label">Crear Factura</span>
+          </button>
+          <button>
+            <img src="../AssetsLuca/icono documentos.png" alt="">
+            <span class="label">Generar Sobre</span>
+          </button>
+          <button>
+            <img src="../AssetsLuca/icono enviar.png" alt="">
+            <span class="label">Enviar al SII</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- BOTÓN MENÚ FUERA -->
+  <button class="menu-toggle">>></button>
+
+  <!-- CHAT -->
+  <main class="chat-wrapper">
+    <header class="chat-header">
+      <h2 class="chat-title">Tu Asistente Contable</h2>
+
+      <button class="logout-button">
+        <img class="logout-icon" src="../AssetsLuca/icono candado.png" alt="logout">
+        Cerrar sesión
+      </button>
+    </header>
+
+    <section class="chat-messages"></section>
+
+    <footer class="chat-input">
+
+      <!-- Botón imagen izquierda (ej: adjuntar, micrófono, etc.) -->
+      <button class="icon-button left">
+        <img src="../AssetsLuca/icono documentos.png" alt="acción">
+      </button>
+
+      <!-- Barra de escritura -->
+      <input type="text" placeholder="Escribe tu mensaje...">
+
+      <!-- Botón imagen derecha (enviar) -->
+      <button class="icon-button right">
+        <img src="../AssetsLuca/icono enviar.png" alt="enviar">
+      </button>
+
+    </footer>
+
+  </main>
+
+</div>
+
+<script src="FuncionamientoChatLucaIA.js"></script>
+</body>
+</html>
