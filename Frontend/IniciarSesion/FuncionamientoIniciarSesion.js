@@ -1,57 +1,68 @@
+// FuncionamientoIniciarSesion.js
 document.addEventListener("DOMContentLoaded", () => {
   const btnLogin = document.querySelector("button");
 
+
   btnLogin.addEventListener("click", async () => {
-    // 2️⃣ Crear JSON con los datos del formulario
-    const loginData = {
-      usuario: document.getElementById("usuario").value.trim(),
-      contrasena: document.getElementById("contrasena").value.trim()
+    const usuario = document.getElementById("usuario")?.value?.trim() || "";
+    const contrasena = document.getElementById("contrasena")?.value?.trim() || "";
+
+
+    if (!usuario || !contrasena) {
+      alert("Completa usuario y contraseña");
+      return;
+    }
+
+
+    // ✅ Tu service espera { login, password }
+    const body = {
+      login: usuario,
+      password: contrasena,
     };
 
+
+    const ENDPOINT = "http://localhost:8000/usuario/login"; // <-- tu ruta
+
+
     try {
-      // 3️⃣ Enviar JSON al backend
-      const response = await fetch("http://192.168.1.157:8000/login", {
+      const resp = await fetch(ENDPOINT, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify(loginData)
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
       });
 
-      const data = await response.json();
 
-      // 4️⃣ Manejar la respuesta
-      if (response.ok) {
-        console.log("Login exitoso:", data);
-        
-        // Guardar token en localStorage
-        if (data.token) {
-          localStorage.setItem("token", data.token);
-          alert("Inicio de sesión correcto");
-          // Redirigir a otra página si quieres
-          // window.location.href = "dashboard.html";
-        } else {
-          alert("Login correcto, pero no se recibió token");
-        }
-      } else {
-        // Manejo básico de errores según el código HTTP
-        switch (response.status) {
-          case 400:
-            alert("Solicitud incorrecta");
-            break;
-          case 401:
-            alert("Usuario o contraseña incorrectos");
-            break;
-          case 500:
-            alert("Error del servidor, intenta más tarde");
-            break;
-          default:
-            alert(`Error desconocido: ${response.status}`);
-        }
+      const raw = await resp.text();
+      let data;
+      try {
+        data = JSON.parse(raw);
+      } catch {
+        console.error("Respuesta NO-JSON:", raw);
+        alert("Backend respondió algo no-JSON (revisa consola).");
+        return;
       }
 
-    } catch (error) {
-      console.error("Error de conexión:", error);
+
+      if (!resp.ok) {
+        alert(data?.error || `Error ${resp.status}`);
+        return;
+      }
+
+
+      // OJO: tu service loginUsuario devuelve data: { id, usuario, roles... }
+      // El token lo debe crear el controller (usando signToken) y devolverlo.
+      const token = data?.token || data?.data?.token;
+
+
+      if (token) {
+        localStorage.setItem("token", token);
+        alert("Login OK ✅");
+      } else {
+        alert("Login OK, pero no llegó token. Revisa el controller /usuario/login.");
+        console.log("Respuesta login:", data);
+      }
+    } catch (e) {
+      console.error(e);
       alert("No se pudo conectar con el servidor");
     }
   });
