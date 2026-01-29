@@ -1,1 +1,190 @@
-[]
+[
+  {
+    "id": "7a938e62-2109-4280-9e97-08e745589b98",
+    "createdAt": "2026-01-29T12:52:47.061Z",
+    "userId": "undefined",
+    "tipo": "BHE",
+    "estado": "EMITIDA_DEMO",
+    "folio": 508534,
+    "fechaEmision": "2026-01-29",
+    "retencion": 2,
+    "receptor": {
+      "rut": "11111111-1",
+      "nombre": "Cliente Demo",
+      "direccion": "Falsa 123",
+      "region": "Antofagasta",
+      "comuna": "Antofagasta",
+      "ciudad": "Antofagasta"
+    },
+    "servicios": [
+      {
+        "descripcion": "Servicio demo 1",
+        "valor": 10000
+      },
+      {
+        "descripcion": "Servicio demo 2",
+        "valor": 20000
+      }
+    ],
+    "resumen": {
+      "totalBruto": 30000,
+      "montoRetencion": 3225,
+      "liquido": 26775
+    },
+    "pdfBase64": "REVNT19QREZfQkFTRTY0",
+    "raw": {
+      "fechaEmision": "2026-01-29",
+      "retencion": 2,
+      "tasaRetencion": 0.1075,
+      "receptor": {
+        "rut": "11111111-1",
+        "nombre": "Cliente Demo",
+        "direccion": "Falsa 123",
+        "region": "Antofagasta",
+        "comuna": "Antofagasta",
+        "ciudad": "Antofagasta"
+      },
+      "servicios": [
+        {
+          "descripcion": "Servicio demo 1",
+          "valor": 10000
+        },
+        {
+          "descripcion": "Servicio demo 2",
+          "valor": 20000
+        }
+      ]
+    },
+    "mode": "demo"
+  },
+  {
+    "id": "180563b4-a0a1-4a3b-8815-ae4a49f42d5e",
+    "createdAt": "2026-01-29T14:42:38.421Z",
+    "userId": "2",
+    "tipo": "BHE",
+    "estado": "EMITIDA_DEMO",
+    "folio": 505175,
+    "fechaEmision": "2026-01-29",
+    "tipoRetencion": "CON_RETENCION",
+    "tasaRetencionPct": 10.75,
+    "emisor": {
+      "direccion": "Av. Principal 123"
+    },
+    "receptor": {
+      "rut": "12345678-9",
+      "nombreCompleto": "Cliente Demo SPA",
+      "direccion": "Los Robles 456",
+      "region": "Metropolitana",
+      "comuna": "Providencia"
+    },
+    "servicios": [
+      {
+        "idx": 0,
+        "descripcion": "Servicio 1",
+        "valor": 100000
+      },
+      {
+        "idx": 1,
+        "descripcion": "Servicio 2",
+        "valor": 50000
+      }
+    ],
+    "resumen": {
+      "totalBruto": 150000,
+      "montoRetencion": 16125,
+      "liquido": 133875
+    },
+    "pdfBase64": "REVNT19QREZfMTc2OTY5Nzc1ODQxNQ==",
+    "raw": {
+      "fechaEmision": "2026-01-29",
+      "tipoRetencion": "CON_RETENCION",
+      "tasaRetencionPct": 10.75,
+      "emisor": {
+        "direccion": "Av. Principal 123"
+      },
+      "receptor": {
+        "rut": "12.345.678-9",
+        "nombreCompleto": "Cliente Demo SPA",
+        "direccion": "Los Robles 456",
+        "region": "Metropolitana",
+        "comuna": "Providencia"
+      },
+      "servicios": [
+        {
+          "descripcion": "Servicio 1",
+          "valor": 100000
+        },
+        {
+          "descripcion": "Servicio 2",
+          "valor": 50000
+        }
+      ]
+    },
+    "mode": "demo"
+  },
+  {
+    "id": "7d710c9f-372a-49e9-8b36-390267d4d4b7",
+    "createdAt": "2026-01-29T17:49:52.361Z",
+    "userId": "2",
+    "tipo": "BHE",
+    "estado": "EMITIDA_DEMO",
+    "folio": 765841,
+    "fechaEmision": "2026-01-29",
+    "tipoRetencion": "CON_RETENCION",
+    "tasaRetencionPct": 10.75,
+    "emisor": {
+      "direccion": "Av. Principal 123"
+    },
+    "receptor": {
+      "rut": "12345678-9",
+      "nombreCompleto": "Cliente Demo SPA",
+      "direccion": "Los Robles 456",
+      "region": "Metropolitana",
+      "comuna": "Providencia"
+    },
+    "servicios": [
+      {
+        "idx": 0,
+        "descripcion": "Servicio 1",
+        "valor": 100000
+      },
+      {
+        "idx": 1,
+        "descripcion": "Servicio 2",
+        "valor": 50000
+      }
+    ],
+    "resumen": {
+      "totalBruto": 150000,
+      "montoRetencion": 16125,
+      "liquido": 133875
+    },
+    "pdfBase64": "REVNT19QREZfMTc2OTcwODk5MjM1NA==",
+    "raw": {
+      "fechaEmision": "2026-01-29",
+      "tipoRetencion": "CON_RETENCION",
+      "tasaRetencionPct": 10.75,
+      "emisor": {
+        "direccion": "Av. Principal 123"
+      },
+      "receptor": {
+        "rut": "12.345.678-9",
+        "nombreCompleto": "Cliente Demo SPA",
+        "direccion": "Los Robles 456",
+        "region": "Metropolitana",
+        "comuna": "Providencia"
+      },
+      "servicios": [
+        {
+          "descripcion": "Servicio 1",
+          "valor": 100000
+        },
+        {
+          "descripcion": "Servicio 2",
+          "valor": 50000
+        }
+      ]
+    },
+    "mode": "demo"
+  }
+]

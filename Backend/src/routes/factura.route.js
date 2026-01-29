@@ -1,10 +1,21 @@
-import { Router } from 'express';
-import { requireAuth } from '../middlewares/auth.middleware.js';
+// src/routes/factura.route.js
+import { Router } from "express";
+import { requireAuth } from "../middlewares/auth.middleware.js";
+import {
+  emitirFacturaController,
+  listarFacturasController,
+  obtenerFacturaController,
+} from "../controllers/factura.controller.js";
 
 const router = Router();
 
-router.post('/', requireAuth, (_req, res) => {
-  res.status(501).json({ ok: false, error: 'Factura no implementada aún' });
-});
+// POST /factura/emitir
+router.post("/emitir", requireAuth, emitirFacturaController);
+
+// GET /factura
+router.get("/", requireAuth, listarFacturasController);
+
+// GET /factura/:id
+router.get("/:id", requireAuth, obtenerFacturaController);
 
 export default router;

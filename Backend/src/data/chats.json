@@ -32,5 +32,73 @@
         "at": "2026-01-28T15:51:42.422Z"
       }
     ]
+  },
+  {
+    "id": "a3703da5-fd7d-41a7-83ab-d4202aabf4f8",
+    "userId": "2",
+    "createdAt": "2026-01-28T17:23:18.598Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "¿cuales son las clasificaciones de las unidades economicas?",
+        "at": "2026-01-28T17:23:18.599Z"
+      },
+      {
+        "role": "assistant",
+        "content": "- Las unidades económicas se clasifican principalmente según su naturaleza, tamaño, propiedad y actividad económica.\n- En Chile, una clasificación común para las unidades económicas agrupa a:\n  1. Empresas y sociedades comerciales\n  2. Instituciones sin fines de lucro\n  3. Unidades productoras de actividades económicas independientes (trabajadores independientes, emprendedores)\n  4. Hogares (cuando producen bienes o servicios para el mercado)\n- Según tamaño, pueden ser micro, pequeñas, medianas o grandes, basándose en ingresos, activos o número de empleados.\n- También se clasifican según sector económico: agrícola, industrial, comercio, servicios, entre otros.\n\nCampos mínimos para continuar:\n- ¿Deseas la clasificación para efectos contables, tributarios o estadísticos?\n- ¿Quieres que te detalle la clasificación según alguna normativa específica (SII, INE, Leyes Chile)?\n- ¿Buscas ejemplos o descripción general?",
+        "at": "2026-01-28T17:23:24.455Z"
+      }
+    ]
+  },
+  {
+    "id": "a70840f1-e8bb-4b16-9482-77bad6953f85",
+    "userId": "2",
+    "createdAt": "2026-01-28T17:26:01.666Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "¿cuales son las clasificaciones de las unidades economicas?",
+        "at": "2026-01-28T17:26:01.666Z"
+      },
+      {
+        "role": "assistant",
+        "content": "- Las unidades económicas se pueden clasificar principalmente según su tamaño, actividad económica y forma jurídica.\n- En Chile, un esquema habitual es clasificarlas en:\n  - Micro, Pequeñas, Medianas y Grandes empresas (según ventas y número de trabajadores).\n  - Por actividad económica: Comercio, Industria, Servicios, Agricultura, entre otros.\n  - Por forma jurídica: Empresas individuales, sociedades anónimas, sociedades de responsabilidad limitada, cooperativas, etc.\n- Esta clasificación permite dimensionar la estructura productiva y establecer políticas tributarias, laborales y de apoyo.\n\nCampos mínimos para continuar:\n- ¿Deseas la clasificación oficial según alguna ley o norma específica?\n- ¿Quieres enfoque en un sector o tipo de unidad económica particular?",
+        "at": "2026-01-28T17:26:05.800Z"
+      }
+    ]
+  },
+  {
+    "id": "2a1a8c71-3533-4e7b-8d94-57cb8bd826f6",
+    "userId": "2",
+    "createdAt": "2026-01-28T17:32:26.660Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "¿cuales son las clasificaciones de las unidades economicas?",
+        "at": "2026-01-28T17:32:26.661Z"
+      },
+      {
+        "role": "assistant",
+        "content": "- Las unidades económicas se clasifican en tres grandes grupos:\n  1. **Unidades de Producción:** Asociadas al esfuerzo humano, recursos materiales y capital para producir bienes y servicios. Constituyen la empresa.\n  2. **Unidades de Consumo:** Obtienen medios de cambio mediante el trabajo para adquirir bienes y servicios en el mercado.\n  3. **Unidades de Circulación y Distribución:** Realizan las operaciones necesarias para el intercambio o venta del producto a los consumidores, formando el proceso de comercialización.\n\n- Además, las unidades económicas pueden o no perseguir fines de lucro, y están reglamentadas y dirigidas por la sociedad.\n\nCampos mínimos para continuar:\n- ¿Quieres información sobre tipos específicos de empresas dentro de estas unidades económicas?\n- ¿Buscas clasificación jurídica, por propiedad del capital o por actividad económica?",
+        "at": "2026-01-28T17:32:33.365Z"
+      }
+    ]
+  },
+  {
+    "id": "237d233d-2967-48f7-820d-b0d0d4c45a75",
+    "userId": "2",
+    "createdAt": "2026-01-28T21:08:51.463Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "¿cuales son las clasificaciones de las unidades economicas?",
+        "at": "2026-01-28T21:08:51.463Z"
+      },
+      {
+        "role": "assistant",
+        "content": "- Las unidades económicas se clasifican en tres grandes grupos:\n  1. Unidades de Producción: Asociadas al esfuerzo humano, recursos materiales y capital para producir bienes y servicios. Constituyen empresas que combinan factores productivos.\n  2. Unidades de Consumo: Obtienen medios de cambio gracias al trabajo para adquirir bienes y servicios en el mercado.\n  3. Unidades de Circulación y Distribución: Realizan las operaciones que permiten el intercambio o venta de productos a los consumidores, conocido también como Proceso de Comercialización.\n\nCampos mínimos para continuar:\n- ¿Quieres que te detalle ejemplos específicos de cada tipo?\n- ¿O necesitas información complementaria sobre clasificaciones de empresas?",
+        "at": "2026-01-28T21:08:57.589Z"
+      }
+    ]
   }
 ]

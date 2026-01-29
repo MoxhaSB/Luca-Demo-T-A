@@ -1,14 +1,17 @@
-import { Router } from 'express';
-import { requireAuth } from '../middlewares/auth.middleware.js';
+// src/routes/dte.route.js
+import { Router } from "express";
+import { requireAuth } from "../middlewares/auth.middleware.js";
+import {
+  generarDteDemoController,
+  listarDtesController,
+  obtenerDteController,
+} from "../controllers/dte.demo.controller.js";
 
 const router = Router();
 
-router.post('/sobre', requireAuth, (_req, res) => {
-  res.status(501).json({ ok: false, error: 'Generar sobre no implementado aún' });
-});
-
-router.post('/enviar', requireAuth, (_req, res) => {
-  res.status(501).json({ ok: false, error: 'Enviar al SII no implementado aún' });
-});
+// DEMO JSON
+router.post("/generar", requireAuth, generarDteDemoController);
+router.get("/", requireAuth, listarDtesController);
+router.get("/:id", requireAuth, obtenerDteController);
 
 export default router;
