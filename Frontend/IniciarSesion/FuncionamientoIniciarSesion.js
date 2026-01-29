@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (token) {
         localStorage.setItem("token", token);
-        alert("Login OK ✅");
+        window.location.href = "../PrimeraInterfaz/EstructuraPrimeraInterfaz.html";
       } else {
         alert("Login OK, pero no llegó token. Revisa el controller /usuario/login.");
         console.log("Respuesta login:", data);
