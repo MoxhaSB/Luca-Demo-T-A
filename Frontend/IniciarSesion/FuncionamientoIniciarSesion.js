@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (token) {
         localStorage.setItem("token", token);
-        window.location.href = "../PrimeraInterfaz/EstructuraPrimeraInterfaz.html";
+        window.location.href = "../ChatLucaIA/EstructuraChatLucaIA.html";
       } else {
         alert("Login OK, pero no llegó token. Revisa el controller /usuario/login.");
         console.log("Respuesta login:", data);
