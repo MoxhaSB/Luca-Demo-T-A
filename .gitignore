@@ -1,0 +1,80 @@
+# =========================
+# Node / NPM
+# =========================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+logs/
+
+# =========================
+# Environment / Secrets
+# =========================
+.env
+.env.*
+!.env.example
+
+# Certificados / llaves (no subir jamás)
+*.pfx
+*.p12
+*.pem
+*.key
+*.crt
+*.cer
+*.csr
+*.der
+*.jks
+
+# =========================
+# Build / Cache
+# =========================
+dist/
+build/
+coverage/
+.cache/
+.parcel-cache/
+.tmp/
+temp/
+
+# =========================
+# Runtime data (persistencia local demo)
+# OJO: ignoramos contenido, no la carpeta
+# =========================
+src/data/*
+data/*
+!src/data/.gitkeep
+!data/.gitkeep
+
+# =========================
+# Uploads / storage temporal
+# =========================
+src/storage/tmp/
+src/storage/uploads/
+storage/
+tmp/
+
+# Si generas DTE/Sobre/adjuntos localmente, ignora SOLO en storage:
+src/storage/**/*.xml
+src/storage/**/*.zip
+
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+.idea/
+
+# =========================
+# Vim swap
+# =========================
+*.swp
+*.swo

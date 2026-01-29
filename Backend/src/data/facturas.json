@@ -1,0 +1,107 @@
+[
+  {
+    "id": "86547cb6-6708-420f-bb4b-fccdda59b448",
+    "createdAt": "2026-01-29T15:27:02.529Z",
+    "userId": "2",
+    "tipo": "FACTURA",
+    "estado": "GENERADA_DEMO",
+    "tipoFactura": "AFECTA",
+    "tipoDte": 33,
+    "ambiente": "CERTIFICACION",
+    "formaPago": "CREDITO",
+    "folio": 12345,
+    "fechaEmision": "2026-01-29",
+    "fechaVencimiento": "2026-02-10",
+    "emisor": {
+      "rut": "76123456-7",
+      "razonSocial": "MI EMPRESA SPA",
+      "giro": "Servicios tecnológicos",
+      "acteco": "620200",
+      "direccion": "Av. Principal 123",
+      "comuna": "Santiago",
+      "telefono": "+56912345678"
+    },
+    "receptor": {
+      "rut": "12345678-9",
+      "razonSocialNombre": "CLIENTE SPA",
+      "direccion": "Los Robles 456",
+      "comuna": "Providencia",
+      "giro": "Servicios varios",
+      "email": "contacto@cliente.cl"
+    },
+    "items": [
+      {
+        "idx": 0,
+        "nombre": "Producto/Servicio 1",
+        "descripcion": "Descripción opcional",
+        "unidad": "UN",
+        "cantidad": 2,
+        "precioUnitario": 10000,
+        "subtotal": 20000
+      },
+      {
+        "idx": 1,
+        "nombre": "Producto/Servicio 2",
+        "descripcion": "",
+        "unidad": "HR",
+        "cantidad": 1,
+        "precioUnitario": 25000,
+        "subtotal": 25000
+      }
+    ],
+    "resumen": {
+      "subtotal": 45000,
+      "ivaPct": 19,
+      "iva": 8550,
+      "total": 53550
+    },
+    "xml": "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n<DTE version=\"1.0\">\n  <Documento ID=\"DEMO_1769700422526\">\n    <Encabezado>\n      <IdDoc>\n        <TipoDTE>33</TipoDTE>\n        <Folio>12345</Folio>\n        <FchEmis>2026-01-29</FchEmis>\n      </IdDoc>\n      <Emisor>\n        <RUTEmisor>76123456-7</RUTEmisor>\n      </Emisor>\n      <Receptor>\n        <RUTRecep>12345678-9</RUTRecep>\n      </Receptor>\n      <Totales>\n        <MntTotal>53550</MntTotal>\n      </Totales>\n    </Encabezado>\n    <Detalle>\n      <NroLinDet>1</NroLinDet>\n      <NmbItem>DEMO</NmbItem>\n      <QtyItem>1</QtyItem>\n      <PrcItem>53550</PrcItem>\n      <MontoItem>53550</MontoItem>\n    </Detalle>\n  </Documento>\n</DTE>",
+    "pdfBase64": "REVNT19QREZfMTc2OTcwMDQyMjUyNg==",
+    "raw": {
+      "tipoFactura": "AFECTA",
+      "ambiente": "CERTIFICACION",
+      "formaPago": "CREDITO",
+      "folio": 12345,
+      "fechaEmision": "2026-01-29",
+      "fechaVencimiento": "2026-02-10",
+      "usarTemporales": true,
+      "certificado": {
+        "password": "demo_password"
+      },
+      "emisor": {
+        "rut": "76.123.456-7",
+        "razonSocial": "MI EMPRESA SPA",
+        "giro": "Servicios tecnológicos",
+        "acteco": "620200",
+        "direccion": "Av. Principal 123",
+        "comuna": "Santiago",
+        "telefono": "+56912345678"
+      },
+      "receptor": {
+        "rut": "12.345.678-9",
+        "razonSocialNombre": "CLIENTE SPA",
+        "direccion": "Los Robles 456",
+        "comuna": "Providencia",
+        "giro": "Servicios varios",
+        "email": "contacto@cliente.cl"
+      },
+      "items": [
+        {
+          "nombre": "Producto/Servicio 1",
+          "descripcion": "Descripción opcional",
+          "unidad": "UN",
+          "cantidad": 2,
+          "precioUnitario": 10000
+        },
+        {
+          "nombre": "Producto/Servicio 2",
+          "descripcion": "",
+          "unidad": "HR",
+          "cantidad": 1,
+          "precioUnitario": 25000
+        }
+      ]
+    },
+    "mode": "demo"
+  }
+]
