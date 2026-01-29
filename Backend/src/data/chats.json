@@ -100,5 +100,22 @@
         "at": "2026-01-28T21:08:57.589Z"
       }
     ]
+  },
+  {
+    "id": "77998ac2-a72c-488a-a5b1-2b62475efed2",
+    "userId": "2",
+    "createdAt": "2026-01-29T20:04:54.135Z",
+    "messages": [
+      {
+        "role": "user",
+        "content": "¿cuales son las clasificaciones de las unidades economicas?",
+        "at": "2026-01-29T20:04:54.135Z"
+      },
+      {
+        "role": "assistant",
+        "content": "- Las unidades económicas se clasifican en tres grandes grupos:\n  1. Unidades de Producción: combinan esfuerzo humano, recursos materiales y capital para producir bienes y servicios. Constituyen las empresas.\n  2. Unidades de Consumo: obtienen ingresos mediante trabajo para adquirir bienes y servicios en el mercado.\n  3. Unidades de Circulación y Distribución: realizan las operaciones para el intercambio o venta de productos a consumidores, formando el proceso de comercialización.\n\nCampos mínimos para continuar:\n- ¿Quieres información sobre otro tema específico de contabilidad o clarificación adicional sobre unidades económicas?",
+        "at": "2026-01-29T20:04:58.115Z"
+      }
+    ]
   }
 ]

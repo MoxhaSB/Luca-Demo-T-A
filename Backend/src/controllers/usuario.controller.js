@@ -1,16 +1,27 @@
 // src/controllers/usuario.controller.js
-import { signToken } from '../middlewares/auth.middleware.js';
-import { loginUsuario } from '../services/usuario.service.js';
+import { signToken } from "../middlewares/auth.middleware.js";
+import { loginUsuario } from "../services/usuario.service.js";
 
 export async function loginController(req, res) {
   // Aceptamos distintas llaves para comodidad del front
-  const { usuario, username, email, password } = req.body || {};
-  const login = usuario || username || email;
+  const body = req.body || {};
+
+  const login =
+    body.login ||
+    body.usuario ||
+    body.username ||
+    body.email;
+
+  const password =
+    body.password ||
+    body.contrasena; // ✅ ahora acepta "contrasena"
 
   const result = await loginUsuario({ login, password });
 
   if (!result.ok) {
-    return res.status(result.status || 500).json({ ok: false, error: result.error || 'Error' });
+    return res
+      .status(result.status || 500)
+      .json({ ok: false, error: result.error || "Error" });
   }
 
   const { id, usuario: usuarioDb, roles, esPrimeraVez } = result.data;
@@ -34,6 +45,5 @@ export async function loginController(req, res) {
 }
 
 export async function meController(req, res) {
-  // requireAuth ya setea req.user
   return res.json({ ok: true, user: req.user });
 }
