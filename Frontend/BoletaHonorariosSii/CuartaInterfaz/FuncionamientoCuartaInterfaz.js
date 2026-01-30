@@ -55,28 +55,27 @@ botones4[1].addEventListener("click", async () => {
 function construirJSONBoleta() {
   const servicios = JSON.parse(localStorage.getItem("servicios")) || [];
   const tipoRetencion = localStorage.getItem("tipoRetencion");
+  const tasaRetencionPct = tipoRetencion === "CON_RETENCION" ? 10.75 : 0;
 
-  const tasaRetencion = tipoRetencion === "CON_RETENCION" ? 10.75 : 0;
 
   return {
-    BOLETA: {
-      fechaEmision: localStorage.getItem("fechaEmision"),
-      tipoRetencion: tipoRetencion,
-      tasaRetencionPct: tasaRetencion,
-      emisor: {
-        direccion: localStorage.getItem("direccionEmisor")
-      },
-      receptor: {
-        rut: localStorage.getItem("receptorRut"),
-        nombreCompleto: localStorage.getItem("receptorNombre"),
-        direccion: localStorage.getItem("receptorDireccion"),
-        region: localStorage.getItem("receptorRegion"),
-        comuna: localStorage.getItem("receptorComuna")
-      },
-      servicios: servicios
-    }
+    fechaEmision: localStorage.getItem("fechaEmision"),
+    tipoRetencion,
+    tasaRetencionPct,
+    emisor: {
+      direccion: localStorage.getItem("direccionEmisor"),
+    },
+    receptor: {
+      rut: localStorage.getItem("receptorRut"),
+      nombreCompleto: localStorage.getItem("receptorNombre"),
+      direccion: localStorage.getItem("receptorDireccion"),
+      region: localStorage.getItem("receptorRegion"),
+      comuna: localStorage.getItem("receptorComuna"),
+    },
+    servicios, // [{ descripcion, valor }, ...]
   };
 }
+
 
 // ======================
 // Limpieza de datos
