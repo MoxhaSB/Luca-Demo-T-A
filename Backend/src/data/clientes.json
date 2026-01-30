@@ -1,0 +1,40 @@
+[
+  {
+    "id": "6f63b434-c783-4f7a-8993-14fb0d180302",
+    "createdAt": "2026-01-29T21:07:22.973Z",
+    "userId": "2",
+    "estado": "ACTIVO_DEMO",
+    "rut": "12345678-9",
+    "nombre": "Cliente Demo SPA",
+    "giro": "Servicios informáticos",
+    "fechaCreacion": "2026-01-29",
+    "direccion": {
+      "calleNumero": "Av. Apoquindo 4500, Oficina 302",
+      "region": "Metropolitana",
+      "comuna": "Las Condes"
+    },
+    "contacto": {
+      "email": "nombre@empresa.com",
+      "telefono": "+56 9 1234 5678",
+      "sitioWeb": "www.tusitio.com"
+    },
+    "extra": {},
+    "raw": {
+      "rut": "12.345.678-9",
+      "nombre": "Cliente Demo SPA",
+      "giro": "Servicios informáticos",
+      "fechaCreacion": "2026-01-29",
+      "productoFrecuente": "Internet Fibra",
+      "direccion": {
+        "calleNumero": "Av. Apoquindo 4500, Oficina 302",
+        "region": "Metropolitana",
+        "comuna": "Las Condes"
+      },
+      "contacto": {
+        "email": "nombre@empresa.com",
+        "telefono": "+56 9 1234 5678",
+        "sitioWeb": "www.tusitio.com"
+      }
+    }
+  }
+]

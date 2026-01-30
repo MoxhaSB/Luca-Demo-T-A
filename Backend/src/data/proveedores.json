@@ -1,0 +1,30 @@
+[
+  {
+    "id": "3c5f796d-0e97-4996-a750-fbb460557d3d",
+    "createdAt": "2026-01-30T12:41:27.708Z",
+    "userId": "2",
+    "tipo": "PROVEEDOR",
+    "estado": "ACTIVO",
+    "rut": "76.345.678-9",
+    "rutNorm": "76345678-9",
+    "razonSocial": "Proveedor Demo SPA",
+    "nombreContacto": "Juan Pérez",
+    "giro": "Importación y distribución de maquinaria pesada",
+    "fechaRegistro": "2026-01-29",
+    "productoPrincipal": "Repuestos hidráulicos",
+    "direccion": {
+      "direccionCasaMatriz": "Av. Las Industrias 1230",
+      "region": "Metropolitana",
+      "comuna": "Quilicura"
+    },
+    "contacto": {
+      "correoVentas": "ventas@proveedor.com",
+      "telefono": "+56 9 8888 7777",
+      "sitioWeb": "www.proveedor-oficial.com"
+    },
+    "raw": {
+      "rut": "76.345.678-9"
+    },
+    "deletedAt": null
+  }
+]
