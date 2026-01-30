@@ -7,8 +7,18 @@ botones4[0].addEventListener("click", () => {
   window.location.href = "../TerceraInterfaz/EstructuraTerceraInterfaz.html";
 });
 
+// ======================
+// Emitir Boleta
+// ======================
 botones4[1].addEventListener("click", async () => {
   const boletaJSON = construirJSONBoleta();
+  const token = localStorage.getItem("token");
+
+  if (!token) {
+    alert("Sesión expirada. Inicia sesión nuevamente.");
+    window.location.href = "../Login/login.html";
+    return;
+  }
 
   console.log("JSON a enviar:", boletaJSON);
 
@@ -16,13 +26,14 @@ botones4[1].addEventListener("click", async () => {
     const response = await fetch("http://localhost:8000/boleta/emitir", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${token}`
       },
       body: JSON.stringify(boletaJSON)
     });
 
     if (!response.ok) {
-      throw new Error("Error al emitir la boleta");
+      throw new Error(`Error ${response.status}`);
     }
 
     const resultado = await response.json();
@@ -30,11 +41,7 @@ botones4[1].addEventListener("click", async () => {
 
     alert("Boleta emitida correctamente ✅");
 
-    // Opcional: limpiar localStorage al finalizar
     limpiarLocalStorage();
-
-    // Opcional: redirigir
-    // window.location.href = "../PrimeraInterfaz/EstructuraPrimeraInterfaz.html";
 
   } catch (error) {
     console.error(error);
@@ -47,12 +54,15 @@ botones4[1].addEventListener("click", async () => {
 // ======================
 function construirJSONBoleta() {
   const servicios = JSON.parse(localStorage.getItem("servicios")) || [];
+  const tipoRetencion = localStorage.getItem("tipoRetencion");
+
+  const tasaRetencion = tipoRetencion === "CON_RETENCION" ? 10.75 : 0;
 
   return {
     BOLETA: {
       fechaEmision: localStorage.getItem("fechaEmision"),
-      tipoRetencion: localStorage.getItem("tipoRetencion"),
-      tasaRetencionPct: 10.75,
+      tipoRetencion: tipoRetencion,
+      tasaRetencionPct: tasaRetencion,
       emisor: {
         direccion: localStorage.getItem("direccionEmisor")
       },
