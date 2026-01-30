@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const facturaBtn = document.querySelector(".factura-btn");
   const facturaOptions = document.querySelector(".submenu-options");
   const chatTitle = document.querySelector(".chat-title");
+  const boletaBtn = document.querySelector(".boleta-btn");
 
   // Expandir / Comprimir sidebar
   menuToggle.addEventListener("click", () => {
@@ -12,6 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
   });
+
+  boletaBtn.addEventListener("click", () => {
+  window.location.href ="../BoletaHonorariosSii/PrimeraInterfaz/EstructuraPrimeraInterfaz.html";
+});
 
   // Submenú factura
   facturaBtn.addEventListener("click", () => {

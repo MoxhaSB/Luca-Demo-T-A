@@ -2,67 +2,63 @@
 document.addEventListener("DOMContentLoaded", () => {
   const btnLogin = document.querySelector("button");
 
-
   btnLogin.addEventListener("click", async () => {
     const usuario = document.getElementById("usuario")?.value?.trim() || "";
     const contrasena = document.getElementById("contrasena")?.value?.trim() || "";
-
 
     if (!usuario || !contrasena) {
       alert("Completa usuario y contraseña");
       return;
     }
 
-
-    // ✅ Tu service espera { login, password }
     const body = {
       login: usuario,
-      password: contrasena,
+      password: contrasena
     };
 
-
-    const ENDPOINT = "http://localhost:8000/usuario/login"; // <-- tu ruta
-
+    const ENDPOINT = "http://localhost:8000/usuario/login";
 
     try {
       const resp = await fetch(ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(body)
       });
-
 
       const raw = await resp.text();
       let data;
+
       try {
         data = JSON.parse(raw);
       } catch {
         console.error("Respuesta NO-JSON:", raw);
-        alert("Backend respondió algo no-JSON (revisa consola).");
+        alert("Respuesta inválida del servidor");
         return;
       }
-
 
       if (!resp.ok) {
         alert(data?.error || `Error ${resp.status}`);
         return;
       }
 
-
-      // OJO: tu service loginUsuario devuelve data: { id, usuario, roles... }
-      // El token lo debe crear el controller (usando signToken) y devolverlo.
       const token = data?.token || data?.data?.token;
 
-
-      if (token) {
-        localStorage.setItem("token", token);
-        window.location.href = "../ChatLucaIA/EstructuraChatLucaIA.html";
-      } else {
-        alert("Login OK, pero no llegó token. Revisa el controller /usuario/login.");
+      if (!token) {
+        alert("Login correcto, pero no llegó el token");
         console.log("Respuesta login:", data);
+        return;
       }
-    } catch (e) {
-      console.error(e);
+
+      // ✅ Guardar token
+      localStorage.setItem("token", token);
+
+      // ✅ Redirigir al chat IA
+      window.location.href = "../ChatLucaIA/EstructuraChatLucaIA.html";
+
+    } catch (error) {
+      console.error(error);
       alert("No se pudo conectar con el servidor");
     }
   });
