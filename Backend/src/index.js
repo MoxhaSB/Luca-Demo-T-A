@@ -13,6 +13,7 @@ import facturaRouter from "./routes/factura.route.js";
 import dteRouter from "./routes/dte.route.js";
 import clienteRouter from "./routes/cliente.route.js";
 import proveedorRouter from "./routes/proveedor.route.js";
+import sobreRouter from "./routes/sobre.route.js";
 
 const app = express();
 
@@ -49,6 +50,7 @@ app.use("/factura", facturaRouter);
 app.use("/dte", dteRouter);
 app.use("/cliente", clienteRouter);
 app.use("/proveedor", proveedorRouter);
+app.use("/sobre", sobreRouter);
 
 app.use(errorMiddleware);
 
