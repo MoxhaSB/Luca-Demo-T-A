@@ -1,10 +1,20 @@
-import { Router } from 'express';
-import { requireAuth } from '../middlewares/auth.middleware.js';
+import { Router } from "express";
+import { requireAuth } from "../middlewares/auth.middleware.js";
+import {
+  crearClienteController,
+  listarClientesController,
+  obtenerClienteController,
+  actualizarClienteController,
+  eliminarClienteController,
+} from "../controllers/cliente.controller.js";
 
 const router = Router();
 
-router.get('/', requireAuth, (_req, res) => {
-  res.json({ ok: true, data: [] });
-});
+// CRUD
+router.post("/", requireAuth, crearClienteController);
+router.get("/", requireAuth, listarClientesController);
+router.get("/:id", requireAuth, obtenerClienteController);
+router.put("/:id", requireAuth, actualizarClienteController);
+router.delete("/:id", requireAuth, eliminarClienteController);
 
 export default router;
