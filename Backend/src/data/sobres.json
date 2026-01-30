@@ -1,0 +1,29 @@
+[
+  {
+    "id": "89d95198-fae1-412c-ab84-559a128e4897",
+    "createdAt": "2026-01-30T13:22:23.401Z",
+    "userId": "2",
+    "tipo": "SOBRE_ENVIO",
+    "estado": "ENVIADO_DEMO",
+    "trackId": "2884881",
+    "ambiente": "CERTIFICACION",
+    "cert": {
+      "rutCertificado": "12.345.678-9",
+      "hasPassword": true,
+      "file": {
+        "name": "torii.jpg",
+        "size": 20799
+      }
+    },
+    "sobreXml": "<EnvioDTE>...</EnvioDTE>",
+    "raw": {
+      "sobreXml": "<EnvioDTE>...</EnvioDTE>",
+      "ambiente": "CERTIFICACION",
+      "cert": {
+        "rutCertificado": "12.345.678-9",
+        "password": "demo"
+      }
+    },
+    "deletedAt": null
+  }
+]
